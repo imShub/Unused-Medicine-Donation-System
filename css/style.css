@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Rowdies&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+body{
+  font-family: 'Open Sans', sans-serif;
+}
+input{
+  font-size: 14px!important;
+  height: 20px!important;
+}
+label{
+  font-size: 16px!important;
+}
+select{
+  font-size: 16px!important;
+}
+
+/* section{
+  height: 100vh;
+} */
+.navbar{
+  font-family: 'Rowdies', Courier, monospace;
+}
+.heading::after{
+  content: "";
+  position: absolute;
+  display: block;
+  width: 54px;
+  height: 4px;
+  background: blueviolet;
+  bottom: 2;
+  left: 0;
+}
+.heading{
+  position: relative; 
+  padding-top: 20px;
+}
+.custom-bg-color{
+  background-color: rgba(226, 160, 255, 0.322);
+}
+/* Home */
+.home{
+  height: 100vh;
+  background-image: url("../img/background.png");
+  background-position: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+.welcome-img{
+  
+}
+.welcome-text{
+  font-size: 49px;
+  padding-left: 200px;
+  padding-top: 210px;
+}
+.donate-button{
+  margin-left: 200px;
+}
+.navbar .nav-link:hover{
+  color: #411489;
+}
+
+/* About Us */
+.aboutus{
+  height: 100vh;
+}
+.card{
+  /* margin: 5px; */
+  cursor: pointer;
+}
+.aboutus .card:hover {
+  transform: translateY(-10px) scale(1.005) translateZ(0);
+  box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px rgba(165, 97, 255, 0.48);
+}
+.card .card-title {
+  font-weight: 700;
+}
+.myForm {
+  min-width: 500px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2.5rem
+}
+/* Media Query */
+@media screen and (max-width: 767px) {
+  .section{
+    height: 100%!important;
+    margin: 2rem;
+  }
+  .welcome{
+    margin-left: -100px;
+  }
+}
