@@ -11,7 +11,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>User Dashboard | Unused Medicine Donation System</title>
+    <title>Admin Dashboard | Unused Medicine Donation System</title>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/bootstrap.min.css" />
     <!-- <link rel="stylesheet" href="css/fontawesome.min.css" /> -->
@@ -30,10 +30,10 @@
 <body>
 
     <script>
-        swal({
+        Swal({
             title: "Good job <?php echo $_SESSION['fname']; ?> !",
             text: "<?php echo $_SESSION['alert']; ?>",
-            icon: "success",
+            icon: "failure",
             button: "Ok",
         });
     </script>
@@ -68,7 +68,7 @@
                                 <?php //echo $_SESSION['fname'] . " " . $_SESSION['lname']; 
                                 ?>
                             </p> -->
-                            <a class="btn btn-outline-success m-2" href="logout.php"><i class="fa fa-sign-out"></i>
+                            <a class="btn btn-outline-success m-2" href="../logout.php"><i class="fa fa-sign-out"></i>
                                 Logout</a>
                         </li>
                     </div>

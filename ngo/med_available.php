@@ -78,6 +78,7 @@
                     <tr>
                         <th scope="col">Sno.</th>
                         <th data-filter-control="input" data-field="bname" scope="col">Brand Name</th>
+                        <th data-filter-control="input" data-field="gname" scope="col">Generic Name</th>
                         <th data-filter-control="input" data-field="med_type" scope="col">Medicine Type</th>
                         <th data-filter-control="input" data-field="exp_date" scope="col">Expire Date</th>
                         <th data-filter-control="input" data-field="quantity" scope="col">Quantity</th>
@@ -95,6 +96,7 @@
                             <tr>
                                 <td scope="col"><?php echo $sn; ?></td>
                                 <td data-filter-control="input" data-field="bname" scope="col"><?php echo $data['brand_name'] ?? ''; ?></td>
+                                <td data-filter-control="input" data-field="bname" scope="col"><?php echo $data['generic_name'] ?? ''; ?></td>
                                 <td data-filter-control="input" data-field="med_type" scope="col"><?php echo $data['med_type'] ?? ''; ?></td>
                                 <td data-filter-control="input" data-field="exp_date" scope="col"><?php echo $data['expire_date'] ?? ''; ?></td>
                                 <td data-filter-control="input" data-field="quantity" scope="col"><?php echo $data['quantity'] ?? ''; ?></td>
