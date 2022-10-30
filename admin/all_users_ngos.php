@@ -120,6 +120,55 @@
             </table>
         </div>
 
+        <div class="container h-100" style="height: 100vh;">
+            <h1 class="mx-auto heading">All NGO's</h1>
+
+            <table class="table table-striped table-hover table-bordered  mt-5" id="table" data-filter-control="true" data-show-search-clear-button="false" data-search="true" data-height="460" data-toolbar="#toolbar">
+                <thead>
+                    <tr>
+                        <th scope="col">Sno.</th>
+                        <th data-filter-control="input" data-field="name" scope="col">Name</th>
+                        <th data-filter-control="input" data-field="openingDate" scope="col">Opening Date</th>
+                        <th data-filter-control="input" data-field="address" scope="col">Address</th>
+                        <th data-filter-control="input" data-field="email" scope="col">Email</th>
+                        <th data-filter-control="input" data-field="password" scope="col">Password</th>
+                        <th data-filter-control="input" data-field="datetime" scope="col">Created Date & Time</th>
+
+                    </tr>
+                </thead>
+                <?php $query = "SELECT * from ngos";
+                $result = mysqli_query($conn, $query);
+                if ($result->num_rows > 0) {
+                    $row = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                    $sn = 1;
+                    foreach ($row as $data) {
+
+                ?>
+                        <tbody>
+                            <tr>
+                                <td scope="col"><?php echo $sn; ?></td>
+                                <td data-filter-control="input" data-field="name" scope="col"><?php echo $data['ngo_name']; ?></td>
+                                <td data-filter-control="input" data-field="email" scope="col"><?php echo $data['opening_date'] ?? ''; ?></td>
+                                <td data-filter-control="input" data-field="gender" scope="col"><?php echo $data['address'] ?? ''; ?></td>
+                                <td data-filter-control="input" data-field="gender" scope="col"><?php echo $data['email'] ?? ''; ?></td>
+                                <td data-filter-control="input" data-field="password" scope="col"><?php echo $data['password'] ?? ''; ?></td>
+                                <td data-filter-control="input" data-field="donated_dateTime" scope="col"><?php echo $data['date_time'] ?? ''; ?></td>
+                            </tr>
+                        </tbody>
+                    <?php
+                        $sn++;
+                    }
+                } else { ?>
+                    <tr>
+                        <td colspan="8">
+                            <?php echo "No Data Found"; ?>
+                        </td>
+                    <tr>
+                    <?php
+                } ?>
+            </table>
+        </div>
+
     </main>
 
 

@@ -51,7 +51,7 @@
                                 <a class="nav-link" href="all_donation.php">All Donations</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="my_donation.php">All Users/Ngo's</a>
+                                <a class="nav-link" href="all_users_ngos.php">All Users/Ngo's</a>
                             </li>
 
                         </ul>
